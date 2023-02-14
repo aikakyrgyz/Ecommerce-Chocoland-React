@@ -22,17 +22,18 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li className='nav__item'>
+                        <NavLink exact='True' className='nav__link' activeclassname='selected' to='/About'>
+                            <i className='uil uil-file-alt nav__icon'></i>
+                            About
+                        </NavLink>
+                    </li>  
+                    <li className='nav__item'>
                         <NavLink exact='True' className='nav__link' activeclassname='selected' to='/Products'>
                             <i className='uil uil-user nav__icon'></i>
                             Products
                         </NavLink>
                     </li>
-                    <li className='nav__item'>
-                        <NavLink exact='True' className='nav__link' activeclassname='selected' to='/Cart'>
-                            <i className='uil uil-file-alt nav__icon'></i>
-                            Cart
-                        </NavLink>
-                    </li>                  
+                                    
                 </ul>
 
                 <i className='uil uil-times nav__close' onClick={() => setToggle(!Toggle)}></i>

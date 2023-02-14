@@ -1,4 +1,4 @@
-import "./index.css"
+import "./Main.css"
 import White from "../../assets/images/white.jpg"
 import Dark from "../../assets/images/dark.jpg"
 import Milk from "../../assets/images/milk.jpg"
