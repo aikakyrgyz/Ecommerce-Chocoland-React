@@ -2,11 +2,11 @@ import "./index.css"
 import Navbar from '../../components/Navbar'
 
 
-const ProductDetail = () => {
+const About = () => {
     return <>
     <html lang="en">
         <head>
-            <title>Product Details</title>
+            <title>About</title>
         </head>
     
     
@@ -15,4 +15,4 @@ const ProductDetail = () => {
     </>
 }
 
-export default ProductDetail;
+export default About;
