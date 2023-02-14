@@ -8,10 +8,10 @@ const Navbar = () => {
 
     return <>
     <header className='header'>
-        <nav className='nav container'>
+        <nav className='nav'>
             <NavLink exact='True' className={isActive =>
                 "nav__logo" + (!isActive ? " unselected" : "")
-                } to='/'>Chocoland</NavLink>
+                } to='/'><h1>Chocoland</h1></NavLink>
 
             <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
                 <ul className='nav__list'>
