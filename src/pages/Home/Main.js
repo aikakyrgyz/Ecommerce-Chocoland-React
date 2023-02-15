@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 // import main from "./Main.module.css"
 
+=======
+import "./Main.css"
+>>>>>>> 1817495bdc8c0923f8d7af975e8403d75460d72f
 import White from "../../assets/images/white.jpg"
 import Dark from "../../assets/images/dark.jpg"
 import Milk from "../../assets/images/milk.jpg"
