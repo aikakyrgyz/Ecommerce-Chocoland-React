@@ -1,0 +1,17 @@
+
+
+
+.button-product-detail
+{
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--title-color);
+    color: var(--container-color);
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    transition: all .35s ease;
+    margin-top: 500px;
+    margin-left: 500px;
+
+}

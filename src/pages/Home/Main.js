@@ -1,13 +1,18 @@
-import "./index.css"
+// import main from "./Main.module.css"
+
 import White from "../../assets/images/white.jpg"
 import Dark from "../../assets/images/dark.jpg"
 import Milk from "../../assets/images/milk.jpg"
 import Kinder from "../../assets/images/kinder.jpeg"
+import ProductDetail from "../ProductDetail"
+import {Link} from "react-router-dom";
+
 
 const Main = () => {
     return <>
-        <section class="home" id="home">
-            <div class="home-text">
+        
+        <section className="home" id="home">
+            <div className="home-text">
                 <h1> New Chocolate <br/> <span> Arrivals</span></h1>
                 <p> Swiss chocolate available in bulks!</p>
                 <a href="#" class="button">View yummy</a>
@@ -70,8 +75,8 @@ const Main = () => {
 
             <div class="new-content">
                 <div class="box">
-                    <img src={Kinder}></img>
-                    <h5>Lorem</h5>
+                    <Link to= "/ProductDetail"> <img src={Kinder}></img> </Link>
+                    <a href={ProductDetail}> <h5>Lorem</h5> </a>
                     <h6>$188</h6> 
                     <div class="sale">
                         <h4>Sale</h4>

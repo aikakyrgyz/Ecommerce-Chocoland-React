@@ -1,0 +1,223 @@
+/* .body-order-form
+{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+
+}  */
+
+.body-order-form
+{
+
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* background-color: #DAD0C8; */
+    background-color: rgba(218, 208, 200, 0.6);
+    padding: 30px;
+
+}
+
+
+.form-section
+{
+  
+    background: rgba(132, 86, 60, 0.3);
+    color: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 40px;
+    border-radius: 1rem;
+
+}
+
+.title-order-form
+{
+    font-size: 25px;
+    position:relative;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+    
+}
+
+.title-order-form::before
+{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 60px;
+    background: #532301;
+}
+
+form .main-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0 8px 0;
+}
+
+
+form .input-field
+{
+    width: calc(100%/2 - 15px);
+    margin: 15px 0;
+}
+
+form .main-box .input-field input
+{
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.09);
+    color: #faf9f6;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding-left: 15px;
+    font-size: 1rem;
+    transition: all .40s ease;
+} 
+
+.order-text
+{
+    display: block;
+    margin-bottom: 7px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.main-box .input-field input:focus,
+.main-box .input-field input:valid 
+{
+    border-color: #fff;
+}
+
+
+form .box-below .shipping
+{
+    font-size:20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* form .box-below
+{
+    justify-content: space-between;
+} */
+
+form .box-below .options
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px 0;
+    color: #fff;
+}
+
+form .box-below .options label
+{
+    display: flex;
+    align-items: center;
+}
+
+.box-below .options .circle
+{
+    width: 17px;
+    height: 17px;
+    border-radius:50%;
+    background: #532301;
+    margin-right: 8px;
+    border: 4px solid transparent;
+}
+
+#ShippingOption1:checked ~ .options label .c1,
+#ShippingOption2:checked ~ .options label .c2,
+#ShippingOption3:checked ~ .options label .c3
+{
+    border-color: #532301;
+    border-width: 3px;
+    background: #fff;
+}
+
+
+form input[type="radio"]
+{
+    display: none;
+}
+
+form .order-button
+{
+    height: 50px;
+    margin: 20px 0;
+
+}
+
+
+form .order-button input
+{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(132, 86, 60, 0.3);
+    color: #532301;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .40s ease;
+}
+
+form .order-button input:hover
+{
+    background: rgba(132, 86, 60, 0.3); 
+    color: white;
+}
+
+.quantity input
+{
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.09);
+    color: #faf9f6;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding-left: 15px;
+    font-size: 1rem;
+    transition: all .40s ease;
+}
+
+@media (max-width: 640px)
+{
+    .form-section
+    {
+        max-width: 100%;
+
+    }
+    form .main-box .input-field
+    {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    form .box-below .options
+    {
+        width: 100%;
+
+    }
+
+    form .main-box
+    {
+        max-height: 430px;
+        overflow-y: scroll;
+        
+    }
+}
