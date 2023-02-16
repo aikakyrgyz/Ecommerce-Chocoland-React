@@ -1,6 +1,7 @@
 import "./index.css"
 import Kinder from "../../assets/images/kinder.jpeg"
 //import Data from "../../assets/database/chocolates.json" 
+import {Link} from "react-router-dom";
 
 
 const ProductList = () => {
@@ -21,10 +22,10 @@ const ProductList = () => {
         {
             "id": 1,
             "name": "Kinder",
-            "category": "dilk",
+            "category": "milk",
             "description": "Round chocolate with white chocolate filling.",
             "cost": 2,
-            "image": "../../assets/images/kinder.jpeg"
+            "image": "../../images/kinder.jpeg"
         },
         {
             "id": 2,
@@ -32,7 +33,7 @@ const ProductList = () => {
             "category": "dark",
             "description": "Assorted chocolate bars",
             "cost": 3,
-            "image": "../../assets/images/bars.jpg"
+            "image": "../../images/bars.jpg"
         },
         {
             "id": 3,
@@ -40,7 +41,7 @@ const ProductList = () => {
             "category": "dark",
             "description": "Round chocolate truffles",
             "cost": 3,
-            "image": "../../assets/images/ferrero.jpeg"
+            "image": "../../images/ferrero.jpeg"
         },
         {
             "id": 4,
@@ -48,7 +49,7 @@ const ProductList = () => {
             "category": "milk",
             "description": "Normal Milk Chocolates",
             "cost": 4,
-            "image": "../../assets/images/milka.jpeg"
+            "image": "../../images/milka.jpeg"
         },
         {
             "id": 5,
@@ -56,7 +57,7 @@ const ProductList = () => {
             "category": "dark",
             "description": "Box full of assorted Sees Candy chocolates",
             "cost": 30,
-            "image": "../../assets/images/sees.jpg"
+            "image": "../../images/sees.jpg"
         },
         {
             "id": 6,
@@ -64,7 +65,7 @@ const ProductList = () => {
             "category": "white",
             "description": "20 pcs of Sees Candy white chocolate!",
             "cost": 35,
-            "image": "../../assets/images/seeswhite.jpg"
+            "image": "../../images/seeswhite.jpg"
         },
         {
             "id": 7,
@@ -72,7 +73,7 @@ const ProductList = () => {
             "category": "white",
             "description": "A bag of the famous lindt lindor's white chocolate!",
             "cost": 14,
-            "image": "../../assets/images/lindorwhite.jpg"
+            "image": "../../images/lindorwhite.jpg"
         },
         {
             "id": 8,
@@ -80,7 +81,7 @@ const ProductList = () => {
             "category": "white",
             "description": "A box full of Godiva's white chocolate assortment",
             "cost": 30,
-            "image": "../../assets/images/godivawhite.jpg"
+            "image": "../../images/godivawhite.jpg"
         },
         {
             "id": 9,
@@ -88,7 +89,7 @@ const ProductList = () => {
             "category": "milk",
             "description": "A box of Godiva's milk chocolate!",
             "cost": 28,
-            "image": "../../assets/images/godiva.jpg"
+            "image": "../../images/godiva.jpg"
         },
         {
             "id": 10,
@@ -96,9 +97,9 @@ const ProductList = () => {
             "category": "milk",
             "description": "A bag of the famous lindt lindor's milk chocolate!",
             "cost": 14,
-            "image": "../../assets/images/lindor.jpg"
+            "image": "../../images/lindor.jpg"
         }
-    ];
+      ];
 
     
     window.onload = function () {
@@ -114,7 +115,7 @@ const ProductList = () => {
             if(product.category === "white") {
                 str += 
                 '<div class="box">'+
-                '<a href=../ProductDetails/'+ product.id+ '>'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
@@ -130,8 +131,9 @@ const ProductList = () => {
 
         products.forEach(function(product) {
             if(product.category === "dark") {
-                str += '<div class="box">'+
-                '<a href=../ProductDetails/'+ product.id+ '>'+
+                str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
@@ -147,8 +149,9 @@ const ProductList = () => {
 
         products.forEach(function(product) {
             if(product.category === "milk") {
-                str += '<div class="box">'+
-                '<a href=../ProductDetails/'+ product.id+ '>'+
+                str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
@@ -168,6 +171,12 @@ const ProductList = () => {
             </div>
 
             <div id="white" class="new-content">
+                {/* <div class="box">
+                    <a href="../ProductDetail" onClick={setLocalStorage(1)}>
+                    <img src={Kinder}></img></a>
+                    <h5>Kinder</h5>
+                    <h6>$2</h6>
+                </div> */}
             </div>
         </section>
 
