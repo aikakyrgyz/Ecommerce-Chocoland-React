@@ -82,7 +82,7 @@ function validateForm()
     {
         alert("Improperly formatted phone number " + phoneNumber.value);
         document.OrderForm.phoneNumber.focus() ;
-        return(false);
+        return false;
     }
 
     // Check address
@@ -92,7 +92,7 @@ function validateForm()
    {
         alert("Address must contain house/apt number");
         document.OrderForm.address.focus() ;
-        return(false);
+        return false;
    }
 
    // card number check
@@ -113,7 +113,7 @@ function validateForm()
    {
       alert ("You must order 1 or more items");
       document.OrderForm.quantity.focus() ;
-      return (false);
+      return false;
    }
 
    // check radio button
@@ -126,7 +126,7 @@ function validateForm()
         return false;
    }
 
-   return (true);
+   return true;
 
 }
 

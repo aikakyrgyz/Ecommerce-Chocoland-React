@@ -102,10 +102,15 @@ const ProductList = () => {
       ];
 
     
-    window.onload = function () {
+    window.onload = (event) => {
         white();
         dark();
         milk();
+
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
     }
     
     const white = () => {
@@ -123,7 +128,8 @@ const ProductList = () => {
             }
         
         }); 
-        document.getElementById("white").innerHTML = str;
+        //document.getElementById("white").innerHTML = str;
+        return {__html: str}
     };
 
     const dark = () => {
@@ -141,7 +147,7 @@ const ProductList = () => {
             }
         
         }); 
-        document.getElementById("dark").innerHTML = str;
+        return {__html: str}
     };
 
     const milk = () => {
@@ -159,20 +165,18 @@ const ProductList = () => {
             }
         
         }); 
-        document.getElementById("milk").innerHTML = str;
+        return {__html: str}
     };
     
     
 
     return <>
-
-    
         <section class="new" id="new">
             <div class="centered-text">
                 <h2>White</h2>
             </div>
 
-            <div id="white" class="new-content">
+            <div id="white" class="new-content" dangerouslySetInnerHTML={white()}>
                 {/* <div class="box">
                     <a href="../ProductDetail" onClick={setLocalStorage(1)}>
                     <img src={Kinder}></img></a>
@@ -187,7 +191,7 @@ const ProductList = () => {
                 <h2>Dark</h2>
             </div>
 
-            <div id="dark" class="new-content"> 
+            <div id="dark" class="new-content" dangerouslySetInnerHTML={dark()}> 
             </div>
         </section>
 
@@ -196,7 +200,7 @@ const ProductList = () => {
                 <h2>Milk</h2>
             </div>
 
-            <div id="milk" class="new-content">
+            <div id="milk" class="new-content" dangerouslySetInnerHTML={milk()}>
             </div>
         </section>
     </>
