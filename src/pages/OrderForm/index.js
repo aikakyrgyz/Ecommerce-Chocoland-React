@@ -119,6 +119,7 @@ function validateForm()
    // check radio button
 
    var checkRadio = document.querySelector('input[name="shippingRadio"]:checked');
+   console.log(checkRadio.value);
    if(checkRadio == null)
    {
         alert("Shipping option is not selected");
@@ -185,9 +186,9 @@ const OrderForm = () => {
                 
 
                 <div class = "box-below">
-                    <input type="radio" name="shippingRadio" id="ShippingOption1"></input>
-                    <input type="radio" name="shippingRadio" id="ShippingOption2"></input>
-                    <input type="radio" name="shippingRadio" id="ShippingOption3"></input>
+                    <input type="radio" name="shippingRadio" value= "Overnight" id="ShippingOption1"></input>
+                    <input type="radio" name="shippingRadio" value = "Next Day" id="ShippingOption2"></input>
+                    <input type="radio" name="shippingRadio" value = "No Rush" id="ShippingOption3"></input>
 
                     <span class="shipping">Shipping</span>
                     <div class="options">
