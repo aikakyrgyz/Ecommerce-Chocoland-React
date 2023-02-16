@@ -13,7 +13,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "Round chocolate with white chocolate filling.",
             "cost": 2,
-            "image": "../../images/kinder.jpeg"
+            "image": "../../images/kinder.jpeg",
+            "brand": "kinder"
         },
         {
             "id": 2,
@@ -21,15 +22,17 @@ const ProductList = () => {
             "category": "dark",
             "description": "Assorted chocolate bars",
             "cost": 3,
-            "image": "../../images/bars.jpg"
+            "image": "../../images/bars.jpg",
+            "brand": "other"
         },
         {
             "id": 3,
-            "name": "Ferrero",
+            "name": "Ferrero By Piece",
             "category": "dark",
             "description": "Round chocolate truffles",
             "cost": 3,
-            "image": "../../images/ferrero.jpeg"
+            "image": "../../images/ferrero.jpeg",
+            "brand": "ferrero"
         },
         {
             "id": 4,
@@ -37,7 +40,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "Normal Milk Chocolates",
             "cost": 4,
-            "image": "../../images/milka.jpeg"
+            "image": "../../images/milka.jpeg",
+            "brand": "milka"
         },
         {
             "id": 5,
@@ -45,7 +49,8 @@ const ProductList = () => {
             "category": "dark",
             "description": "Box full of assorted Sees Candy chocolates",
             "cost": 30,
-            "image": "../../images/sees.jpg"
+            "image": "../../images/sees.jpg",
+            "brand": "sees"
         },
         {
             "id": 6,
@@ -53,7 +58,8 @@ const ProductList = () => {
             "category": "white",
             "description": "20 pcs of Sees Candy white chocolate!",
             "cost": 35,
-            "image": "../../images/seeswhite.jpg"
+            "image": "../../images/seeswhite.jpg",
+            "brand": "sees"
         },
         {
             "id": 7,
@@ -61,7 +67,8 @@ const ProductList = () => {
             "category": "white",
             "description": "A bag of the famous lindt lindor's white chocolate!",
             "cost": 14,
-            "image": "../../images/lindorwhite.jpg"
+            "image": "../../images/lindorwhite.jpg",
+            "brand": "lindor"
         },
         {
             "id": 8,
@@ -69,7 +76,8 @@ const ProductList = () => {
             "category": "white",
             "description": "A box full of Godiva's white chocolate assortment",
             "cost": 30,
-            "image": "../../images/godivawhite.jpg"
+            "image": "../../images/godivawhite.jpg",
+            "brand": "godiva"
         },
         {
             "id": 9,
@@ -77,7 +85,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "A box of Godiva's milk chocolate!",
             "cost": 28,
-            "image": "../../images/godiva.jpg"
+            "image": "../../images/godiva.jpg",
+            "brand": "godiva"
         },
         {
             "id": 10,
@@ -85,34 +94,71 @@ const ProductList = () => {
             "category": "milk",
             "description": "A bag of the famous lindt lindor's milk chocolate!",
             "cost": 14,
-            "image": "../../images/lindor.jpg"
+            "image": "../../images/lindor.jpg",
+            "brand": "lindor"
         }
       ];
+
+    const lindor = () => {
+        let str = "";
+
+        products.forEach(function(product) {
+            if(product.brand === "lindor") {
+                str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
+                '<img src='+product.image+'></img></a>' +
+                '<h5>' + product.name + '</h5>' +
+                '<h6>$' + product.cost + '</h6>' +
+                '</div>';
+            }
+        
+        }); 
+        
+        return {__html: str}
+    };
+
+    const godiva = () => {
+        let str = "";
+
+        products.forEach(function(product) {
+            if(product.brand === "godiva") {
+                str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
+                '<img src='+product.image+'></img></a>' +
+                '<h5>' + product.name + '</h5>' +
+                '<h6>$' + product.cost + '</h6>' +
+                '</div>';
+            }
+        
+        }); 
+        return {__html: str}
+    };
+
+    const milka = () => {
+        let str = "";
+
+        products.forEach(function(product) {
+            if(product.brand === "milka") {
+                str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
+                '<img src='+product.image+'></img></a>' +
+                '<h5>' + product.name + '</h5>' +
+                '<h6>$' + product.cost + '</h6>' +
+                '</div>';
+            }
+        
+        }); 
+        return {__html: str}
+    };
     
-    const white = () => {
+    const ferrero = () => {
         let str = "";
 
         products.forEach(function(product) {
-            if(product.category === "white") {
-                str += 
-                '<div class="box">'+
-                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
-                '<h5>' + product.name + '</h5>' +
-                '<h6>$' + product.cost + '</h6>' +
-                '</div>';
-            }
-        
-        }); 
-        //document.getElementById("white").innerHTML = str;
-        return {__html: str}
-    };
-
-    const dark = () => {
-        let str = "";
-
-        products.forEach(function(product) {
-            if(product.category === "dark") {
+            if(product.brand === "ferrero") {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
@@ -126,11 +172,11 @@ const ProductList = () => {
         return {__html: str}
     };
 
-    const milk = () => {
+    const sees = () => {
         let str = "";
 
         products.forEach(function(product) {
-            if(product.category === "milk") {
+            if(product.brand === "sees") {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
@@ -143,40 +189,78 @@ const ProductList = () => {
         }); 
         return {__html: str}
     };
-    
+
+    const other = () => {
+        let str = "";
+
+        products.forEach(function(product) {
+            if(product.brand === "other") {
+                str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
+                '<img src='+product.image+'></img></a>' +
+                '<h5>' + product.name + '</h5>' +
+                '<h6>$' + product.cost + '</h6>' +
+                '</div>';
+            }
+        
+        }); 
+        return {__html: str}
+    };
     
 
     return <>
         <section class="new" id="new">
             <div class="centered-text">
-                <h2>White</h2>
+                <h2>Godiva</h2>
             </div>
 
-            <div id="white" class="new-content" dangerouslySetInnerHTML={white()}>
-                {/* <div class="box">
-                    <a href="../ProductDetail" onClick={setLocalStorage(1)}>
-                    <img src={Kinder}></img></a>
-                    <h5>Kinder</h5>
-                    <h6>$2</h6>
-                </div> */}
+            <div id="godiva" class="new-content" dangerouslySetInnerHTML={godiva()}>
             </div>
         </section>
 
         <section class="new" id="new">
             <div class="centered-text">
-                <h2>Dark</h2>
+                <h2>Lindt Lindor</h2>
             </div>
 
-            <div id="dark" class="new-content" dangerouslySetInnerHTML={dark()}> 
+            <div id="lindor" class="new-content" dangerouslySetInnerHTML={lindor()}>
             </div>
         </section>
 
         <section class="new" id="new">
             <div class="centered-text">
-                <h2>Milk</h2>
+                <h2>Milka</h2>
             </div>
 
-            <div id="milk" class="new-content" dangerouslySetInnerHTML={milk()}>
+            <div id="milka" class="new-content" dangerouslySetInnerHTML={milka()}>
+            </div>
+        </section>
+
+        <section class="new" id="new">
+            <div class="centered-text">
+                <h2>Ferrero</h2>
+            </div>
+
+            <div id="ferrero" class="new-content" dangerouslySetInnerHTML={ferrero()}>
+            </div>
+        </section>
+
+        <section class="new" id="new">
+            <div class="centered-text">
+                <h2>Sees Candy</h2>
+            </div>
+
+            <div id="sees" class="new-content" dangerouslySetInnerHTML={sees()}> 
+            </div>
+        </section>
+
+        <section class="new" id="new">
+            <div class="centered-text">
+                <h2>Others</h2>
+            </div>
+
+            <div id="other" class="new-content" dangerouslySetInnerHTML={other()}>
             </div>
         </section>
     </>

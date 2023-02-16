@@ -30,7 +30,13 @@ const Navbar = () => {
                     <li className='nav__item'>
                         <NavLink exact='True' className='nav__link' activeclassname='selected' to='/Products'>
                             <i className='uil uil-user nav__icon'></i>
-                            Products
+                            Flavors
+                        </NavLink>
+                    </li>
+                    <li className='nav__item'>
+                        <NavLink exact='True' className='nav__link' activeclassname='selected' to='/ProductsByBrand'>
+                            <i className='uil uil-user nav__icon'></i>
+                            Brands
                         </NavLink>
                     </li>
                                     
