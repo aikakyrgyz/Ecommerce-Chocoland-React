@@ -165,6 +165,8 @@ const ProductList = () => {
     
 
     return <>
+
+    
         <section class="new" id="new">
             <div class="centered-text">
                 <h2>White</h2>

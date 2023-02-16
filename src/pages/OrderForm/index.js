@@ -135,6 +135,24 @@ function clear()
     document.getElementById("orderForm").reset();
 }
 
+
+let oF = document.OrderForm;
+
+// console.log(of)
+if(oF){
+    oF.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    if (validateForm()) {
+        oF.submit()
+    } 
+    else {
+        // Give some sort of error feedback
+        oF.classList.add('invalid')
+    }
+    })
+}
+
 const OrderForm = () => {
     return <>
         <Navbar/>
@@ -142,7 +160,7 @@ const OrderForm = () => {
         <section class="form-section">
         <h1 class="title-order-form">Order Form</h1>
 
-            <form method="POST" action="mailto:aikamusiconly@gmail.com" name="orderForm"  enctype="text/plain" onSubmit={validateForm}>
+            <form method="POST" action="mailto:aikamusiconly@gmail.com" name="orderForm" id="orderForm"  enctype="text/plain" onSubmit={validateForm}>
                 <div class="main-box">
                     <div class="input-field">
                         <span class="order-text">Product ID</span>
