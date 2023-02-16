@@ -107,7 +107,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -126,7 +126,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -144,7 +144,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -162,7 +162,9 @@ const ProductList = () => {
                 <h2>White</h2>
             </div>
 
-            <div id="white" class="new-content" dangerouslySetInnerHTML={white()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={white()}>
+                </div>
             </div>
         </section>
 
@@ -171,16 +173,19 @@ const ProductList = () => {
                 <h2>Dark</h2>
             </div>
 
-            <div id="dark" class="new-content" dangerouslySetInnerHTML={dark()}> 
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={dark()}>
+                </div>
             </div>
         </section>
 
         <section class="new" id="new">
             <div class="centered-text" id="milkheader">
-                <h2>Milk</h2>
+                <h2 className="brand-header">Milk</h2>
             </div>
-
-            <div id="milk" class="new-content" dangerouslySetInnerHTML={milk()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={milk()}>
+                </div>
             </div>
         </section>
     </>

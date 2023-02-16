@@ -1,0 +1,27 @@
+.new {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.product-image {
+    object-fit: contain;
+}
+
+.box {
+    width: 350px;
+}
+
+.category-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 50px;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}

@@ -12,15 +12,6 @@ import { HashLink } from "react-router-hash-link"
 const Main = () => {
     let products = [
         {
-            "id": 3,
-            "name": "Ferrero By Piece",
-            "category": "dark",
-            "description": "Round chocolate truffles",
-            "cost": 3,
-            "image": "../../images/ferrero.jpeg",
-            "brand": "ferrero"
-        },
-        {
             "id": 4,
             "name": "Milka",
             "category": "milk",
@@ -56,7 +47,7 @@ const Main = () => {
             str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -106,15 +97,6 @@ const Main = () => {
                         </div>
                     </HashLink>
                 </div>  
-
-                <div class="row">
-                    <HashLink to="../ProductsByBrand#godiva">
-                        <img src={Godiva}></img>
-                        <div class="feature-text">
-                            <h5>Godiva</h5>
-                        </div>
-                    </HashLink>
-                </div> 
             </div>
         </section>
 
@@ -131,7 +113,9 @@ const Main = () => {
                 <h2>New Tastes!</h2>
             </div>
 
-            <div class="new-content" dangerouslySetInnerHTML={sublistCards()}>
+            <div className="center">
+                <div class="category-content" dangerouslySetInnerHTML={sublistCards()}>
+                </div>
             </div>
         </section>
 

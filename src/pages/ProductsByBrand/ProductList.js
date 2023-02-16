@@ -107,7 +107,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -126,7 +126,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -144,7 +144,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -162,7 +162,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -180,7 +180,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -198,7 +198,7 @@ const ProductList = () => {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img src='+product.image+'></img></a>' +
+                '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -215,7 +215,9 @@ const ProductList = () => {
                 <h2>Godiva</h2>
             </div>
 
-            <div id="godiva" class="new-content" dangerouslySetInnerHTML={godiva()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={godiva()}>
+                </div>
             </div>
         </section>
 
@@ -224,7 +226,9 @@ const ProductList = () => {
                 <h2>Lindt Lindor</h2>
             </div>
 
-            <div id="lindor" class="new-content" dangerouslySetInnerHTML={lindor()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={lindor()}>
+                </div>
             </div>
         </section>
 
@@ -233,7 +237,9 @@ const ProductList = () => {
                 <h2>Milka</h2>
             </div>
 
-            <div id="milka" class="new-content" dangerouslySetInnerHTML={milka()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={milka()}>
+                </div>
             </div>
         </section>
 
@@ -242,7 +248,9 @@ const ProductList = () => {
                 <h2>Ferrero</h2>
             </div>
 
-            <div id="ferrero" class="new-content" dangerouslySetInnerHTML={ferrero()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={ferrero()}>
+                </div>
             </div>
         </section>
 
@@ -251,7 +259,9 @@ const ProductList = () => {
                 <h2>Sees Candy</h2>
             </div>
 
-            <div id="sees" class="new-content" dangerouslySetInnerHTML={sees()}> 
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={sees()}>
+                </div>
             </div>
         </section>
 
@@ -260,7 +270,9 @@ const ProductList = () => {
                 <h2>Others</h2>
             </div>
 
-            <div id="other" class="new-content" dangerouslySetInnerHTML={other()}>
+            <div className="center">
+                <div id="milk" class="category-content" dangerouslySetInnerHTML={other()}>
+                </div>
             </div>
         </section>
     </>
