@@ -3,11 +3,67 @@ import White from "../../assets/images/white.jpg"
 import Dark from "../../assets/images/dark.jpg"
 import Milk from "../../assets/images/milk.jpg"
 import Kinder from "../../assets/images/kinder.jpeg"
+import Godiva from "../../assets/images/godivalogo.png"
 import ProductDetail from "../ProductDetail"
 import {Link} from "react-router-dom";
+import { HashLink } from "react-router-hash-link"
 
 
 const Main = () => {
+    let products = [
+        {
+            "id": 3,
+            "name": "Ferrero By Piece",
+            "category": "dark",
+            "description": "Round chocolate truffles",
+            "cost": 3,
+            "image": "../../images/ferrero.jpeg",
+            "brand": "ferrero"
+        },
+        {
+            "id": 4,
+            "name": "Milka",
+            "category": "milk",
+            "description": "Normal Milk Chocolates",
+            "cost": 4,
+            "image": "../../images/milka.jpeg",
+            "brand": "milka"
+        },
+        {
+            "id": 6,
+            "name": "Sees Candy - White Chocolate Box",
+            "category": "white",
+            "description": "20 pcs of Sees Candy white chocolate!",
+            "cost": 35,
+            "image": "../../images/seeswhite.jpg",
+            "brand": "sees"
+        },
+        {
+            "id": 9,
+            "name": "Godiva Milk Chocolate Gift Box",
+            "category": "milk",
+            "description": "A box of Godiva's milk chocolate!",
+            "cost": 28,
+            "image": "../../images/godiva.jpg",
+            "brand": "godiva"
+        }
+      ];
+
+    const sublistCards = () => {
+        let str = "";
+
+        products.forEach(function(product) {
+            str += 
+                '<div class="box">'+
+                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
+                '<img src='+product.image+'></img></a>' +
+                '<h5>' + product.name + '</h5>' +
+                '<h6>$' + product.cost + '</h6>' +
+                '</div>';
+        }); 
+        return {__html: str}
+    };
+
     return <>
         
         <section className="home" id="home">
@@ -25,37 +81,40 @@ const Main = () => {
 
             <div class="featured-content">
                 <div class="row">
-                    <img src={White}></img>
-                    <div class="feature-text">
-                        <h5>White</h5>
-                        <p> 10 items</p>
-                    </div>
-                    <div class="arrow-into">
-                        <a href="#"><i class='bx bx-chevrons-right'></i></a>
-                    </div>
+                    <HashLink to="../Products#white">
+                        <img src={White}></img>
+                        <div class="feature-text">
+                            <h5>White</h5>
+                        </div>
+                    </HashLink>
                 </div>
 
                 <div class="row">
+                    <HashLink to="../Products#darkheader">
                     <img src={Dark}></img>
                     <div class="feature-text">
                         <h5>Dark</h5>
-                        <p> 10 items</p>
                     </div>
-                    <div class="arrow-into">
-                        <a href="#"><i class='bx bx-chevrons-right'></i></a>
-                    </div>
+                    </HashLink>
                 </div>
 
                 <div class="row">
-                    <img src={Milk}></img>
-                    <div class="feature-text">
-                        <h5>Milk</h5>
-                        <p> 10 items</p>
-                    </div>
-                    <div class="arrow-into">
-                        <a href="#"><i class='bx bx-chevrons-right'></i></a>
-                    </div>
+                    <HashLink to="../Products#milkheader">
+                        <img src={Milk}></img>
+                        <div class="feature-text">
+                            <h5>Milk</h5>
+                        </div>
+                    </HashLink>
                 </div>  
+
+                <div class="row">
+                    <HashLink to="../ProductsByBrand#godiva">
+                        <img src={Godiva}></img>
+                        <div class="feature-text">
+                            <h5>Godiva</h5>
+                        </div>
+                    </HashLink>
+                </div> 
             </div>
         </section>
 
@@ -72,71 +131,10 @@ const Main = () => {
                 <h2>New Tastes!</h2>
             </div>
 
-            <div class="new-content">
-                <div class="box">
-                    <Link to= "/ProductDetail"> <img src={Kinder}></img> </Link>
-                    <a href={ProductDetail}> <h5>Lorem</h5> </a>
-                    <h6>$188</h6> 
-                    <div class="sale">
-                        <h4>Sale</h4>
-                    </div>
-                </div>
-
-
-                <div class="box">
-                <img src={Kinder}></img>
-                    <h5>Lorem</h5>
-                    <h6>$188</h6> 
-                    <div class="sale">
-                        <h4>Sale</h4>
-                    </div>
-                </div>
-
-
-                <div class="box">
-                    <img src={Kinder}></img>
-                    <h5>Lorem</h5>
-                    <h6>$188</h6> 
-                    <div class="sale">
-                        <h4>Sale</h4>
-                    </div>
-                </div>
-
-
-                <div class="box">
-                    <img src={Kinder}></img>
-                    <h5>Lorem</h5>
-                    <h6>$188</h6> 
-                    <div class="sale">
-                        <h4>Sale</h4>
-                    </div>
-                </div>
+            <div class="new-content" dangerouslySetInnerHTML={sublistCards()}>
             </div>
         </section>
 
-        <section class="brand">
-            <div class="brand-content">
-                <div class="main">
-                    <img src={Kinder}></img>    
-                </div>
-                <div class="main">
-                    <img src={Kinder}></img>    
-                </div>
-                <div class="main">
-                    <img src={Kinder}></img>    
-                </div>
-                <div class="main">
-                    <img src={Kinder}></img>
-                </div>
-                <div class="main">
-                    <img src={Kinder}></img>
-                </div>
-                <div class="main">
-                    <img src={Kinder}></img>
-                </div>
-            </div>
-
-        </section>
 
         <section class="contact" id="contact">
 

@@ -13,7 +13,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "Round chocolate with white chocolate filling.",
             "cost": 2,
-            "image": "../../images/kinder.jpeg"
+            "image": "../../images/kinder.jpeg",
+            "brand": "kinder"
         },
         {
             "id": 2,
@@ -21,15 +22,17 @@ const ProductList = () => {
             "category": "dark",
             "description": "Assorted chocolate bars",
             "cost": 3,
-            "image": "../../images/bars.jpg"
+            "image": "../../images/bars.jpg",
+            "brand": "other"
         },
         {
             "id": 3,
-            "name": "Ferrero",
+            "name": "Ferrero By Piece",
             "category": "dark",
             "description": "Round chocolate truffles",
             "cost": 3,
-            "image": "../../images/ferrero.jpeg"
+            "image": "../../images/ferrero.jpeg",
+            "brand": "ferrero"
         },
         {
             "id": 4,
@@ -37,7 +40,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "Normal Milk Chocolates",
             "cost": 4,
-            "image": "../../images/milka.jpeg"
+            "image": "../../images/milka.jpeg",
+            "brand": "milka"
         },
         {
             "id": 5,
@@ -45,7 +49,8 @@ const ProductList = () => {
             "category": "dark",
             "description": "Box full of assorted Sees Candy chocolates",
             "cost": 30,
-            "image": "../../images/sees.jpg"
+            "image": "../../images/sees.jpg",
+            "brand": "sees"
         },
         {
             "id": 6,
@@ -53,7 +58,8 @@ const ProductList = () => {
             "category": "white",
             "description": "20 pcs of Sees Candy white chocolate!",
             "cost": 35,
-            "image": "../../images/seeswhite.jpg"
+            "image": "../../images/seeswhite.jpg",
+            "brand": "sees"
         },
         {
             "id": 7,
@@ -61,7 +67,8 @@ const ProductList = () => {
             "category": "white",
             "description": "A bag of the famous lindt lindor's white chocolate!",
             "cost": 14,
-            "image": "../../images/lindorwhite.jpg"
+            "image": "../../images/lindorwhite.jpg",
+            "brand": "lindor"
         },
         {
             "id": 8,
@@ -69,7 +76,8 @@ const ProductList = () => {
             "category": "white",
             "description": "A box full of Godiva's white chocolate assortment",
             "cost": 30,
-            "image": "../../images/godivawhite.jpg"
+            "image": "../../images/godivawhite.jpg",
+            "brand": "godiva"
         },
         {
             "id": 9,
@@ -77,7 +85,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "A box of Godiva's milk chocolate!",
             "cost": 28,
-            "image": "../../images/godiva.jpg"
+            "image": "../../images/godiva.jpg",
+            "brand": "godiva"
         },
         {
             "id": 10,
@@ -85,7 +94,8 @@ const ProductList = () => {
             "category": "milk",
             "description": "A bag of the famous lindt lindor's milk chocolate!",
             "cost": 14,
-            "image": "../../images/lindor.jpg"
+            "image": "../../images/lindor.jpg",
+            "brand": "lindor"
         }
       ];
     
@@ -153,17 +163,11 @@ const ProductList = () => {
             </div>
 
             <div id="white" class="new-content" dangerouslySetInnerHTML={white()}>
-                {/* <div class="box">
-                    <a href="../ProductDetail" onClick={setLocalStorage(1)}>
-                    <img src={Kinder}></img></a>
-                    <h5>Kinder</h5>
-                    <h6>$2</h6>
-                </div> */}
             </div>
         </section>
 
         <section class="new" id="new">
-            <div class="centered-text">
+            <div class="centered-text" id="darkheader">
                 <h2>Dark</h2>
             </div>
 
@@ -172,7 +176,7 @@ const ProductList = () => {
         </section>
 
         <section class="new" id="new">
-            <div class="centered-text">
+            <div class="centered-text" id="milkheader">
                 <h2>Milk</h2>
             </div>
 
