@@ -1,6 +1,4 @@
 
-
-
 .button-product-detail
 {
     display: inline-block;
@@ -13,5 +11,4 @@
     transition: all .35s ease;
     margin-top: 500px;
     margin-left: 500px;
-
 }

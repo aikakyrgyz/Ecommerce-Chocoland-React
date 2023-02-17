@@ -1,4 +1,84 @@
+Team Members:
 
+Ayako Kuwayama
+ID#: 52381852
+Email: kuwayama@uci.edu
+
+
+ID#: 
+Email: @uci.edu
+
+
+ID#: 
+Email: @uci.edu
+
+
+=====================General Layout of the Pages=====================
+
+---------------------------Home Page-----------------------------
+
+
+---------------------------About Page-----------------------------
+
+
+---------------------------Flavor Page-----------------------------
+
+
+---------------------------Brand Page-----------------------------
+
+
+---------------------------OrderForm Page-----------------------------
+
+
+=====================Requirements Specification=====================
+
+1.An overview of your business, the products you sell, the management team, and any other information that you think makes sense for the customers to know about your company. 
+
+
+
+
+2.Display a list of products (at least 10) available for sale in a table with multiple rows and columns, where each product is shown within a separate cell.
+
+
+3.Display an image for each product available for sale in each cell.
+
+
+
+4.Display the price and other key information (e.g., color, material, etc.) associated with each product in the corresponding table cell.
+
+
+
+5.The user should be able to choose a product from this table by clicking on the corresponding image, which should lead to a new page that provides additional details about the product, e.g., more images, detailed description, etc. 
+
+
+
+6.On the detailed description page, the user should be able to order a product by filling a form. The form should allow the user to enter the product identifier, quantity, first name, last name, phone number, shipping address, shipping method (e.g., overnight, 2-days expedited, 6-days ground), credit card information, and anything else that you think makes sense for your business.
+
+
+
+7.Upon submitting the form, the website should send an email with the purchase order information included in the body of the email. Note that to send an email, one needs to connect to the SMTP server, which is not possible with the client-side software. Thus, this requirement simply requires bringing up the email client with the purchase order information included in the body of the email and allowing the user to send the email. 
+
+
+
+8.Before submitting the form, it should be checked for proper formatting, including whether all fields are filled properly, whether the phone number, address, and credit card are properly formatted, etc. An alarm should be raised if a field is empty or not properly formatted to prevent submission of bad data. 
+
+
+
+9.Your website should use CSS for layout and styling. You should create style rules so that the general design of the website, mainly the products page, is as close as possible to this image:
+
+
+
+10.The website should be responsive and mobile friendly.
+
+
+
+11.Provide the ability to to track the mouse movement, such that when the mouse moves over a product image, the size of the image is increased, and when the mouse moves out, the size of the image is returned back to normal. This feature can be implemented on either the page that displays the various products, or on the pages that show the details of each product, or both. 
+
+
+
+
+
+=====================Automatically Generated Information=====================
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10040054&assignment_repo_type=AssignmentRepo)
 
 # Getting Started with Create React App

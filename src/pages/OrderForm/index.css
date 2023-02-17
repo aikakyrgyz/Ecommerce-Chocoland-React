@@ -1,14 +1,5 @@
-/* .body-order-form
-{
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-
-}  */
-
 .body-order-form
 {
-
     box-sizing: border-box;
     margin-top:100px;
     padding: 0;
@@ -20,7 +11,6 @@
     /* background-color: #DAD0C8; */
     background-color: rgba(218, 208, 200, 0.6);
     padding: 30px;
-
 }
 
 
