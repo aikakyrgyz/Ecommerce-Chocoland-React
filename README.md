@@ -32,49 +32,97 @@ Email: @uci.edu
 
 =====================Requirements Specification=====================
 
-1.An overview of your business, the products you sell, the management team, and any other information that you think makes sense for the customers to know about your company. 
+1.An overview of your business, the products you sell, the management team, and any other 
+information that you think makes sense for the customers to know about your company. 
+
+This is satisfied by the Home and About page. 
+On the home page there are some links to some of the categories and products we have selling.
+On the About page, the information regarding the management team and all other information
+about the company.
 
 
+2.Display a list of products (at least 10) available for sale in a table with multiple rows
+ and columns, where each product is shown within a separate cell.
 
-
-2.Display a list of products (at least 10) available for sale in a table with multiple rows and columns, where each product is shown within a separate cell.
+On the Flavor and Brand page, all of the products are listed by the categories and 
+each product have its own cell to display the product's image, name, and cost.
+The more products there are, the more rows there will be added on to each category
+and will change depending the window size.
 
 
 3.Display an image for each product available for sale in each cell.
 
+All products shown in the Flavor and Brand page have its own cell and show an image of the product.
 
 
-4.Display the price and other key information (e.g., color, material, etc.) associated with each product in the corresponding table cell.
+4.Display the price and other key information (e.g., color, material, etc.) associated with 
+each product in the corresponding table cell.
+
+In the flavor and brand page, each product shows the name, cost, and image in each cell.
 
 
+5.The user should be able to choose a product from this table by clicking on the corresponding 
+image, which should lead to a new page that provides additional details about the product,
+ e.g., more images, detailed description, etc. 
 
-5.The user should be able to choose a product from this table by clicking on the corresponding image, which should lead to a new page that provides additional details about the product, e.g., more images, detailed description, etc. 
-
-
-
-6.On the detailed description page, the user should be able to order a product by filling a form. The form should allow the user to enter the product identifier, quantity, first name, last name, phone number, shipping address, shipping method (e.g., overnight, 2-days expedited, 6-days ground), credit card information, and anything else that you think makes sense for your business.
-
-
-
-7.Upon submitting the form, the website should send an email with the purchase order information included in the body of the email. Note that to send an email, one needs to connect to the SMTP server, which is not possible with the client-side software. Thus, this requirement simply requires bringing up the email client with the purchase order information included in the body of the email and allowing the user to send the email. 
+From the flavor and brand pages, the user can click on any of the products to get more information
+regarding it. In the product detail page, it shows the image, name, description, cost, brand name,
+flavor, and the product id of the product. 
 
 
+6.On the detailed description page, the user should be able to order a product by filling a form.
+ The form should allow the user to enter the product identifier, quantity, first name, last name, 
+ phone number, shipping address, shipping method (e.g., overnight, 2-days expedited, 6-days ground), 
+ credit card information, and anything else that you think makes sense for your business.
 
-8.Before submitting the form, it should be checked for proper formatting, including whether all fields are filled properly, whether the phone number, address, and credit card are properly formatted, etc. An alarm should be raised if a field is empty or not properly formatted to prevent submission of bad data. 
+On the product detail page, it has a button on the bottom to take the user to another page to fill out
+the order form. This order form includes product identifier, quantity, first name, last name, phone number, 
+shipping address, credit card information, and shipping method. 
 
 
+7.Upon submitting the form, the website should send an email with the purchase order information 
+included in the body of the email. Note that to send an email, one needs to connect to the SMTP 
+server, which is not possible with the client-side software. Thus, this requirement simply 
+requires bringing up the email client with the purchase order information included in the body 
+of the email and allowing the user to send the email. 
 
-9.Your website should use CSS for layout and styling. You should create style rules so that the general design of the website, mainly the products page, is as close as possible to this image:
+Once the user correctly inputs all data and click on the submit button, the user will be taken to its 
+preset email client page with the information. If the user have their computer set up properly, an email 
+will show up with the entered information.
+**This may have some error if the computer/email/browser setting was not set up correctly to make 
+the email client come up. We had some issues sometimes where it will work and not work for some reason.
 
+
+8.Before submitting the form, it should be checked for proper formatting, including whether all 
+fields are filled properly, whether the phone number, address, and credit card are properly 
+formatted, etc. An alarm should be raised if a field is empty or not properly formatted to prevent 
+submission of bad data. 
+
+Almost all of the fields have some kind of validation such as not inputting correct formation for 
+the phone number or email address. The user cannot send an email if any of the fields are not 
+correctly inputted. Any incorrect input will trigger a small window indicating which input was 
+wrong when pressing submit.
+
+
+9.Your website should use CSS for layout and styling. You should create style rules so that 
+the general design of the website, mainly the products page, is as close as possible to this image.
+
+Although our product pages are not exactly like the image since we divided it by subcategoies 
+the products are listed in a table/grid format. Almost all of the styling is done in the css file.
+If you look at the folders in the src->page folder, all of the pages have their own css file.
 
 
 10.The website should be responsive and mobile friendly.
 
+All of the pages have a navigation bar, that is responsive to the width of the screen.
+When the screen becomes narrower, the navigation bar will move to the bottom and is able to close if necessary.
 
 
 11.Provide the ability to to track the mouse movement, such that when the mouse moves over a product image, the size of the image is increased, and when the mouse moves out, the size of the image is returned back to normal. This feature can be implemented on either the page that displays the various products, or on the pages that show the details of each product, or both. 
 
-
+Almost on all pages where it is clickable, when the mouse hover overs the image, the image respond by decreasing
+the size just a little to indicate that it senses the mouse. When the mouse is not hovered over, then the image 
+reverts back to its original size.
 
 
 
