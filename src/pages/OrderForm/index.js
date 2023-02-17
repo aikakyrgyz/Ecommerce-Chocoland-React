@@ -3,7 +3,6 @@ import Navbar from '../../components/Navbar'
 import {Link} from "react-router-dom";
 
 
-
 function containsNumber(str) {
     return /\d/.test(str);
 }
@@ -116,7 +115,7 @@ function validateForm()
            alert("Shipping option is not selected");
            return false;
      }
-     
+     // only open the email client when the form is valid. Otherwise refresh the form. 
      var of = document.getElementById('orderForm')
      of.method="POST";
      of.enctype="text/plain";
@@ -157,7 +156,6 @@ const OrderForm = () => {
         <body class="body-order-form">
         <section class="form-section">
         <a href="/OrderForm"><h1  class="title-order-form">Order Form</h1></a>
-        {/* method="POST" action="mailto:aikamusiconly@gmail.com" */}
             <form  name="orderForm" id="orderForm"  onSubmit={validateForm}>
                 <div class="main-box">
                     <div class="input-field">
