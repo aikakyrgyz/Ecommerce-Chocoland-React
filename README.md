@@ -8,9 +8,9 @@ Orhan Ozbasaran
 ID#: 63039729
 Email: oozbasar@uci.edu
 
-
-ID#: 
-Email: @uci.edu
+Aigerim Kubanychbek kyzy
+ID#: 70321299
+Email: akubanyc@uci.edu
 
 
 =====================General Layout of the Pages=====================
@@ -28,6 +28,7 @@ Email: @uci.edu
 
 
 ---------------------------OrderForm Page-----------------------------
+
 When the user chooses a specific product from either the home page,
 flavors or brands page, the link will lead to the product-detail page.
 On the detail page, when the "order" button is clicked it will 
