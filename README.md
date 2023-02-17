@@ -15,8 +15,22 @@ Email: @uci.edu
 
 =====================General Layout of the Pages=====================
 
----------------------------Home Page-----------------------------
+When you first open the site, you are taken to the home page. 
+All of the pages includes a navigation bar on the top and if the page is narrow
+the naviagation bar moves to the bottom and can be closed if necessary.
+On the navigation bar we have buttons to take you to the home, about, flavor, 
+and brand page. If can also go to the home page by clicking the site name.
 
+---------------------------Home Page-----------------------------
+On this page we have some information of what kind of categories we have which 
+is the different flavors of chocolate. For each of these flavors, you can click 
+and will take you to the flavor pages to the corrensponding section/flavor.
+
+If move more to the bottom, you will see some of the products in the New Tastes! 
+section and can click on those images to take you to the product detail page of that product.
+
+On the bottom in the footer, if you click on some of the words, it will take
+ you to scrolling to specific page of the home page.
 
 ---------------------------About Page-----------------------------
 
@@ -116,6 +130,7 @@ If you look at the folders in the src->page folder, all of the pages have their 
 
 All of the pages have a navigation bar, that is responsive to the width of the screen.
 When the screen becomes narrower, the navigation bar will move to the bottom and is able to close if necessary.
+On the home page and about page, the images will change row/column numbers depending on the the width of the window.
 
 
 11.Provide the ability to to track the mouse movement, such that when the mouse moves over a product image, the size of the image is increased, and when the mouse moves out, the size of the image is returned back to normal. This feature can be implemented on either the page that displays the various products, or on the pages that show the details of each product, or both. 

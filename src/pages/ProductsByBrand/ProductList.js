@@ -18,6 +18,7 @@ const ProductList = () => {
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
+                '<h6>Flavor: ' + product.category + '</h6>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
             }
@@ -37,6 +38,7 @@ const ProductList = () => {
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
+                '<h6>Flavor: ' + product.category + '</h6>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
             }
@@ -55,6 +57,7 @@ const ProductList = () => {
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
+                '<h6>Flavor: ' + product.category + '</h6>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
             }
@@ -73,6 +76,7 @@ const ProductList = () => {
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
+                '<h6>Flavor: ' + product.category + '</h6>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
             }
@@ -91,6 +95,7 @@ const ProductList = () => {
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
+                '<h6>Flavor: ' + product.category + '</h6>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
             }
@@ -109,6 +114,7 @@ const ProductList = () => {
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
                 '<img class="product-image" src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
+                '<h6>Flavor: ' + product.category + '</h6>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
             }

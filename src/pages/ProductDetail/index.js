@@ -22,21 +22,6 @@ const ProductDetail = () => {
       break;
     }
   }
-
-  function convertToHtml() {
-    // let str = "";
-
-    // str += 
-    //       //'<img src='+product.image+'> </img>'+
-    //         '<h1>' + product.name + '</h1>'+
-    //         '<h2>' + product.description + '</h2>' +
-    //         '<h2>$' + product.cost + '</h2>';
-
-    // document.getElementById("productInfo").innerHTML = str;
-  
-  }
-    
-  
     
   return <>
       <Navbar/>
