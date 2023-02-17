@@ -1,4 +1,5 @@
 
+
 import "./index.css"
 import Data from "../../assets/database/chocolates.json" 
 
@@ -40,8 +41,8 @@ const ProductDetail = () => {
   return <>
       <Navbar/>
 
-      <br/><br/><br/><br/><br/>
-
+      {/* <br/><br/><br/><br/><br/> */}
+    <body class="product-detail-body">
       <Container id='productInfo'>
         <Row id='leftside'>
           <Col id="leftside" sm={6}>
@@ -49,22 +50,22 @@ const ProductDetail = () => {
           </Col>
           
           <Col id="rightside">
-            <h1>{productInfo.name}</h1>
+            <h1 class="pd-h1">{productInfo.name}</h1>
 
-            <h3>{productInfo.description}</h3>
-            <br/>
-            <h3>Cost: ${productInfo.cost}</h3>
-            <br/>
-            <h4>Flavor: {productInfo.category}</h4>
-            <h4>Brand: {productInfo.brand}</h4>
-            
-            <h4>ProductID Number: {productInfo.id}</h4>
+            <h3 class="pd-h3">{productInfo.description}</h3>
+            {/* <br/> */}
+            {/* <h3 class="pd-cost">Cost: ${productInfo.cost}</h3> */}
+            {/* <br/> */}
+            <h4 class="pd-h4"><span>Flavor:</span> {productInfo.category}</h4>
+            <h4 class="pd-h4"><span>Brand:</span> {productInfo.brand}</h4>
+            <h4 class="pd-h4"><span>ProductID Number: </span> {productInfo.id}</h4>
+            <Link to = "/OrderForm" class="button-product-detail">Order ${productInfo.cost}</Link> 
           </Col>
         </Row>
         
       </Container>
 
-    <Link to = "/OrderForm" class="button-product-detail">Order</Link> 
+    </body>
     </>
 }
 
