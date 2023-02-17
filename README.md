@@ -8,9 +8,9 @@ Orhan Ozbasaran
 ID#: 63039729
 Email: oozbasar@uci.edu
 
-
-ID#: 
-Email: @uci.edu
+Aigerim Kubanychbek kyzy
+ID#: 70321299
+Email: akubanyc@uci.edu
 
 
 =====================General Layout of the Pages=====================
@@ -43,6 +43,25 @@ On the bottom in the footer, if you click on some of the words, it will take
 
 ---------------------------OrderForm Page-----------------------------
 
+When the user chooses a specific product from either the home page,
+flavors or brands page, the link will lead to the product-detail page.
+On the detail page, when the "order" button is clicked it will 
+take the user to the "Order Form" page where the user is able to fill in
+the order by specifying:
+1. id of the product (which is validated as must be a number in the range
+of the possible ids of our products)
+2. First Name (validated to not include any numbers nor be empty)
+3. Last Name (validated to not inclide any numbers nor be empty)
+4. Mobile Number (validated for the US number only in the format of 000-000-0000)
+5. Email (must be of existing domain, automatically validated by html)
+6. Address (must contain both numbers and characters)
+7. Card Number (must be a VISA card number that starts with 4 and contain 16 digits, 
+ex:  4111111111111111)
+8. Quantity (must order one or more items)
+9. Shipping (there are three options where one of them must be chosen in order to proceed)
+When the user submits the form all of the data goes through validation, and only if 
+the validation is successful and there are no alerts given, the email client will
+open up with the body of the email containing the order information. 
 
 =====================Requirements Specification=====================
 
