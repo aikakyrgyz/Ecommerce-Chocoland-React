@@ -24,12 +24,14 @@ function validPhoneNumber(phone)
 
 function validCardNumber(cardNumber)
 {
-    var validCardNo = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
-    if(cardNumber.match(validCardNo))
-        return true;
-    return false;
+  var validCardNo = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  if(cardNumber.match(validCardNo))
+    return true;
+return false;
+
 }
- 
+
+
 function validateForm()
 {
 
@@ -37,10 +39,13 @@ function validateForm()
     // productID check
     var productID = document.orderForm.productID;
     console.log(productID.value);
-    if(parseInt(productID.value)< 0 ||  parseInt(productID.value)>10)
+    console.log(parseInt(productID.value));
+
+
+    if(Number.isNaN(parseInt(productID.value)) || parseInt(productID.value)< 0 ||  parseInt(productID.value)>10)
     {
+        console.log(parseInt(productID.value));
         alert("Invalid product ID");
-        //document.OrderForm.productID.focus() ;
         return false;
 
     }
@@ -50,7 +55,6 @@ function validateForm()
    if(containsNumber(firstName.value))
    {
         alert("First name cannot contain numbers")
-        //document.OrderForm.firstName.focus() ;
         return (false);
    }
 
@@ -61,7 +65,6 @@ function validateForm()
    if(containsNumber(firstName.value))
    {
         alert("Last name cannot contain numbers");
-        //document.OrderForm.lastName.focus() ;
         return false;
    }
 
@@ -72,7 +75,6 @@ function validateForm()
     if(!validPhoneNumber(phoneNumber.value))
     {
         alert("Improperly formatted phone number " + phoneNumber.value);
-        //document.OrderForm.phoneNumber.focus() ;
         return false;
     }
 
@@ -82,7 +84,6 @@ function validateForm()
    if(doesNotContainNumber(address.value))
    {
         alert("Address must contain house/apt number");
-        //document.OrderForm.address.focus() ;
         return false;
    }
 
@@ -91,31 +92,36 @@ function validateForm()
    console.log(cardNumber.value); 
    if(!validCardNumber(cardNumber.value))
    {
-    alert("Not a valid Visa credit card number!\nMust start with number 4 for visa!");
-    //document.OrderForm.lastName.focus() ;
-    return false;
-   }
-
-
-   //quantity check
-   var quantity = document.orderForm.quantity;
-   console.log(quantity.value)
-   if (parseInt(quantity.value)<1)
-   {
-      alert ("You must order 1 or more items");
-    //   document.OrderForm.quantity.focus() ;
-      return false;
-   }
-
-   // check radio button
-
-   var checkRadio = document.querySelector('input[name="shippingRadio"]:checked');
-   console.log(checkRadio.value);
-   if(checkRadio == null)
-   {
-        alert("Shipping option is not selected");
+        alert("Not a valid Visa credit card number!");
         return false;
    }
+
+
+      //quantity check
+      var quantity = document.orderForm.quantity;
+      //    console.log(quantity.value)
+         
+         if (Number.isNaN(parseInt(quantity.value))|| parseInt(quantity.value)<1)
+         {
+            alert ("You must order 1 or more items");
+            return false;
+         }
+      // check radio button
+
+      var checkRadio = document.querySelector('input[name="shippingRadio"]:checked');
+      console.log("This is the radio button value");
+      if(checkRadio == null)
+      {
+    
+           alert("Shipping option is not selected");
+           return false;
+     }
+     
+     var of = document.getElementById('orderForm')
+     of.method="POST";
+     of.enctype="text/plain";
+     of.action = 'mailto:email@domain.com';
+     
 
    return true;
 
@@ -129,7 +135,8 @@ function clear()
 
 let oF = document.OrderForm;
 
-// console.log(of)
+
+
 if(oF){
     oF.addEventListener('submit', function (event) {
     event.preventDefault()
@@ -149,9 +156,9 @@ const OrderForm = () => {
         <Navbar/>
         <body class="body-order-form">
         <section class="form-section">
-        <h1 class="title-order-form">Order Form</h1>
-
-            <form method="POST" action="mailto:aikamusiconly@gmail.com" name="orderForm" id="orderForm"  enctype="text/plain" onSubmit={validateForm}>
+        <a href="/OrderForm"><h1  class="title-order-form">Order Form</h1></a>
+        {/* method="POST" action="mailto:aikamusiconly@gmail.com" */}
+            <form  name="orderForm" id="orderForm"  onSubmit={validateForm}>
                 <div class="main-box">
                     <div class="input-field">
                         <span class="order-text">Product ID</span>
@@ -175,21 +182,21 @@ const OrderForm = () => {
 
                     <div class="input-field">
                         <span class="order-text">Email</span>
-                        <input type="email" name="email" placeholder="email@address.com" required></input>
+                        <input type="email" name="email" placeholder="" required></input>
                     </div>
 
                     <div class="input-field">
                         <span class="order-text">Shipping Address</span>
-                        <input type="text" name="address" placeholder="Address must contain house/apt number" required></input>
+                        <input type="text" name="address" placeholder="" required></input>
                     </div>
 
                     <div class="input-field">
                         <span class="text">Card Number</span>
-                        <input type="text" name="cardNumber" placeholder="4111111111111111" required></input>
+                        <input type="text" name="cardNumber" placeholder="" required></input>
                     </div>
                     <div class="input-field">
                         <span class="text">Quantity</span>
-                        <input type="text" name="quantity" placeholder="1" required></input>
+                        <input type="text" name="quantity" placeholder="" required></input>
                     </div>
                 </div>
                 
