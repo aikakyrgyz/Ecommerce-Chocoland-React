@@ -4,9 +4,9 @@ Ayako Kuwayama
 ID#: 52381852
 Email: kuwayama@uci.edu
 
-
-ID#: 
-Email: @uci.edu
+Orhan Ozbasaran
+ID#: 63039729
+Email: oozbasar@uci.edu
 
 
 ID#: 
