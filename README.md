@@ -34,12 +34,15 @@ On the bottom in the footer, if you click on some of the words, it will take
 
 ---------------------------About Page-----------------------------
 
+There are 3 pictures of how the product is made, the owners, and the history of the company.
 
 ---------------------------Flavor Page-----------------------------
 
+Chocolates sorted by their flavor. Clicking one takes the user to the corresponding product page to order it.
 
 ---------------------------Brand Page-----------------------------
 
+Chocolates sorted by their brands. Clicking one takes the user to the corresponding product page to order it.
 
 ---------------------------OrderForm Page-----------------------------
 
