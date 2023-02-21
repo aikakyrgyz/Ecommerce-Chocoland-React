@@ -88,5 +88,15 @@
         "cost": 14,
         "image": "../../images/lindor.jpg",
         "brand": "lindor"
+    },
+
+    {
+        "id": 11,
+        "name": "Ferrero Assorti",
+        "category": "milk",
+        "description": "Rafaello and ferrero combined",
+        "cost": 18,
+        "image": "../../images/ferreroAssorti.jpg",
+        "brand": "ferrero"
     }
   ]

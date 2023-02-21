@@ -21,23 +21,24 @@ const Main = () => {
             "brand": "milka"
         },
         {
-            "id": 6,
-            "name": "Sees Candy - White Chocolate Box",
+            "id": 8,
+            "name": "Godiva White Chocolate Assortment Gift Box",
             "category": "white",
-            "description": "20 pcs of Sees Candy white chocolate!",
-            "cost": 35,
-            "image": "../../images/seeswhite.jpg",
-            "brand": "sees"
-        },
-        {
-            "id": 9,
-            "name": "Godiva Milk Chocolate Gift Box",
-            "category": "milk",
-            "description": "A box of Godiva's milk chocolate!",
-            "cost": 28,
-            "image": "../../images/godiva.jpg",
+            "description": "A box full of Godiva's white chocolate assortment",
+            "cost": 30,
+            "image": "../../images/godivawhite.jpg",
             "brand": "godiva"
-        }
+        },
+
+        {
+            "id": 1,
+            "name": "Kinder",
+            "category": "milk",
+            "description": "Round chocolate with white chocolate filling.",
+            "cost": 2,
+            "image": "../../images/kinder.jpeg",
+            "brand": "kinder"
+        },
       ];
 
     const sublistCards = () => {
@@ -47,7 +48,7 @@ const Main = () => {
             str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img class="product-image" src='+product.image+'></img></a>' +
+                '<img src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>$' + product.cost + '</h6>' +
                 '</div>';
@@ -113,10 +114,15 @@ const Main = () => {
                 <h2>New Tastes!</h2>
             </div>
 
-            <div className="center">
+            {/* <div className="center">
                 <div class="category-content" dangerouslySetInnerHTML={sublistCards()}>
                 </div>
+            </div> */}
+            <div class="new-content" dangerouslySetInnerHTML={sublistCards()} >
+
             </div>
+
+
         </section>
 
 

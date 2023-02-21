@@ -31,16 +31,9 @@
     }
 }
 
-.about-content 
-{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap: 1.5rem;
-    align-items: center;
-    margin-top: 4rem;
-}
 
-.featured {
+
+.featured-about {
     padding-top: 20px;
     padding-bottom: 20px;
 }

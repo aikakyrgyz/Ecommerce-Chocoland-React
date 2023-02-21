@@ -7,99 +7,62 @@ import {Link} from "react-router-dom";
 const ProductList = () => {
 
     let products = JSON.parse(JSON.stringify(Data));
-    
-    const white = () => {
-        let str = "";
 
+    const categories = () => {
+        let str = '<div class="white-chocolate"> <section class="new" id="new"> <div class="centered-text"> <h2 class="category-name">White</h2></div> <div class="new-content" >';
         products.forEach(function(product) {
             if(product.category === "white") {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img class="product-image" src='+product.image+'></img></a>' +
+                '<img src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>Brand: ' + product.brand + '</h6>' +
-                '<h6>$' + product.cost + '</h6>' +
+                '<div class="sale">' + '<h4>$' + product.cost + '</h4></div>' +
                 '</div>';
             }
-        
-        }); 
-        //document.getElementById("white").innerHTML = str;
-        return {__html: str}
-    };
-
-    const dark = () => {
-        let str = "";
-
+        });
+        str += '</div> </section></div>';
+        str += '<section class="new" id="new"> <div class="centered-text"> <h2>Dark</h2></div> <div class="new-content" >';
         products.forEach(function(product) {
-            if(product.category === "dark") {
-                str += 
-                '<div class="box">'+
-                '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img class="product-image" src='+product.image+'></img></a>' +
-                '<h5>' + product.name + '</h5>' +
-                '<h6>Brand: ' + product.brand + '</h6>' +
-                '<h6>$' + product.cost + '</h6>' +
-                '</div>';
-            }
-        
+                if(product.category === "dark") {
+                    str += 
+                    '<div class="box">'+
+                    '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
+                    '<img src='+product.image+'></img></a>' +
+                    '<h5>' + product.name + '</h5>' +
+                    '<h6>Brand: ' + product.brand + '</h6>' +
+                    '<div class="sale">' + '<h4>$' + product.cost + '</h4></div>' +
+                    '</div>';
+                } 
         }); 
-        return {__html: str}
-    };
-
-    const milk = () => {
-        let str = "";
-
+        str += '</div> </section>';
+        str += '<div class="milk-chocolate"><section class="new" id="new"> <div class="centered-text"> <h2>Milk</h2></div> <div class="new-content" >';
         products.forEach(function(product) {
             if(product.category === "milk") {
                 str += 
                 '<div class="box">'+
                 '<a href=../ProductDetail onclick={localStorage.setItem("productId",'+product.id+');}>'+
-                '<img class="product-image" src='+product.image+'></img></a>' +
+                '<img src='+product.image+'></img></a>' +
                 '<h5>' + product.name + '</h5>' +
                 '<h6>Brand: ' + product.brand + '</h6>' +
-                '<h6>$' + product.cost + '</h6>' +
-                '</div>';
+                '<div class="sale">' + '<h4>$' + product.cost + '</h4></div>' +
+                    '</div>';
             }
         
         }); 
+        str += '</div> </section></div>';
+
+
+
+        //document.getElementById("white").innerHTML = str;
         return {__html: str}
     };
     
     
 
     return <>
-        <section class="new" id="new">
-            <div class="centered-text">
-                <h2>White</h2>
-            </div>
-
-            <div className="center">
-                <div id="milk" class="category-content" dangerouslySetInnerHTML={white()}>
-                </div>
-            </div>
-        </section>
-
-        <section class="new" id="new">
-            <div class="centered-text" id="darkheader">
-                <h2>Dark</h2>
-            </div>
-
-            <div className="center">
-                <div id="milk" class="category-content" dangerouslySetInnerHTML={dark()}>
-                </div>
-            </div>
-        </section>
-
-        <section class="new" id="new">
-            <div class="centered-text" id="milkheader">
-                <h2 className="brand-header">Milk</h2>
-            </div>
-            <div className="center">
-                <div id="milk" class="category-content" dangerouslySetInnerHTML={milk()}>
-                </div>
-            </div>
-        </section>
+        <body class="productList-body" dangerouslySetInnerHTML={categories()}></body>
     </>
 }
 

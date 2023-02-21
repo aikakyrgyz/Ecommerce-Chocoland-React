@@ -1,4 +1,4 @@
-import "./index.css"
+// import "./index.css"
 import Navbar from '../../components/Navbar'
 import ProductList from "./ProductList";
 

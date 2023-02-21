@@ -10,7 +10,7 @@ const About = () => {
         <Navbar/>
 
 
-        <section class="featured" id="featured">
+        <section class="featured-about"id="featured">
             <div class="centered-text">
                 <h2>Featured Categories</h2>
             </div>
@@ -30,7 +30,7 @@ const About = () => {
             </div>
         </section>
 
-        <section class="featured" id="featured">
+        <section class="featured-about">
             <div class="centered-text border-box">
                 <h2>Who We Are?</h2>
             </div>
@@ -49,7 +49,7 @@ const About = () => {
             </div>
         </section>
 
-        <section class="featured" id="featured">
+        <section class="featured-about" >
             <div class="centered-text">
                 <p className="border-box">
                     One of the most iconic brands of the Chocoland Group was created in 1982 in Alba, a small town in the hills of Piedmont in Italy. It was inspired by the desire to make all the pleasure of a sophisticated chocolate specialty accessible to a much wider public. Initially sold in Europe, Chocoland soon became the favorite boxed chocolate for millions of people around the world. Today, it is the world leader in its category and is sold in 140 countries across five continents.

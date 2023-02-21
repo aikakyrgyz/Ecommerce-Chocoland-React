@@ -176,7 +176,7 @@ header.sticky
 
 .centered-text h2
 {
-    font-size:var(--h3-font);
+    font-size: 1.5rem;
 }
 
 .featured-content 
@@ -299,6 +299,10 @@ header.sticky
     margin-top: 4rem;
     text-align:center;
     color: var(--title-color);
+    /* display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 4rem; */
 }
 
 .box
@@ -497,3 +501,4 @@ li {
         }
     }
 }
+
