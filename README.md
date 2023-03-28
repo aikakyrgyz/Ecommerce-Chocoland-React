@@ -1,18 +1,3 @@
-Team Members:
-
-Ayako Kuwayama
-ID#: 52381852
-Email: kuwayama@uci.edu
-
-Orhan Ozbasaran
-ID#: 63039729
-Email: oozbasar@uci.edu
-
-Aigerim Kubanychbek kyzy
-ID#: 70321299
-Email: akubanyc@uci.edu
-
-
 =====================General Layout of the Pages=====================
 
 When you first open the site, you are taken to the home page. 
