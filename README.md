@@ -1,4 +1,4 @@
-## ===================== General Layout of the Pages ===================== </br>
+### ===================== General Layout of the Pages ===================== </br>
 
 When you first open the site, you are taken to the home page. 
 All of the pages includes a navigation bar on the top and if the page is narrow
@@ -6,7 +6,7 @@ the naviagation bar moves to the bottom and can be closed if necessary.
 On the navigation bar we have buttons to take you to the home, about, flavor, 
 and brand page. If can also go to the home page by clicking the site name.
 
-## --------------------------- Home Page ----------------------------- </br>
+### --------------------------- Home Page ----------------------------- </br>
 On this page we have some information of what kind of categories we have which 
 is the different flavors of chocolate. For each of these flavors, you can click 
 and will take you to the flavor pages to the corrensponding section/flavor.
@@ -17,19 +17,19 @@ section and can click on those images to take you to the product detail page of 
 On the bottom in the footer, if you click on some of the words, it will take
  you to scrolling to specific page of the home page.
 
-## ---------------------------About Page-----------------------------</br>
+### ---------------------------About Page-----------------------------</br>
 
 There are 3 pictures of how the product is made, the owners, and the history of the company.
 
-## --------------------------- Flavor Page -----------------------------</br>
+### --------------------------- Flavor Page -----------------------------</br>
 
 Chocolates sorted by their flavor. Clicking one takes the user to the corresponding product page to order it.
 
-## --------------------------- Brand Page -----------------------------</br>
+### --------------------------- Brand Page -----------------------------</br>
 
 Chocolates sorted by their brands. Clicking one takes the user to the corresponding product page to order it.
 
-## --------------------------- OrderForm Page -----------------------------</br>
+### --------------------------- OrderForm Page -----------------------------</br>
 
 When the user chooses a specific product from either the home page,
 flavors or brands page, the link will lead to the product-detail page.
@@ -51,7 +51,7 @@ When the user submits the form all of the data goes through validation, and only
 the validation is successful and there are no alerts given, the email client will
 open up with the body of the email containing the order information. 
 
-## ===================== Requirements Specification ===================== </br>
+### ===================== Requirements Specification ===================== </br>
 
 1.An overview of your business, the products you sell, the management team, and any other 
 information that you think makes sense for the customers to know about your company. 
